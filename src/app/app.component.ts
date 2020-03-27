@@ -19,6 +19,7 @@ export class AppComponent {
   downloadURL: string;
   svgCode: string;
   picker;
+  linkTag = '<link rel="icon" type="image/svg+xml" href="favicon.svg" />';
 
   constructor(private clipboard: Clipboard, private snackBar: MatSnackBar) {
     this.picker = new EmojiButton();
@@ -37,8 +38,8 @@ export class AppComponent {
     this.downloadURL = 'data:image/svg+xml,' + encodeURIComponent(this.svgCode);
   }
 
-  copySVG() {
-    this.clipboard.copy(this.svgCode);
+  copy(content) {
+    this.clipboard.copy(content);
     this.snackBar.open('コピーしました', null, {
       duration: 2000
     });

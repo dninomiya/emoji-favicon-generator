@@ -13,11 +13,11 @@
 <div class="main">
   <div class="editor">
     <mat-slide-toggle class="editor__theme" [(ngModel)]="settings.isDarkMode"
-      >ダークモード</mat-slide-toggle
+      >Dark Mode</mat-slide-toggle
     >
 
     <mat-form-field class="editor__title">
-      <mat-label>タイトル</mat-label>
+      <mat-label>Title</mat-label>
       <input
         type="text"
         matInput
@@ -43,12 +43,23 @@
       #result
       matTextareaAutosize
       [value]="svgCode"
-      (click)="result.select()"
     ></textarea>
     <mat-icon
       matSuffix
       matTooltip="コピー"
-      (click)="copySVG()"
+      (click)="copy(svgCode)"
+      fontSet="material-icons-outlined"
+      >file_copy_</mat-icon
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>HTML</mat-label>
+    <input type="text" [value]="linkTag" matInput readonly />
+    <mat-icon
+      matSuffix
+      matTooltip="コピー"
+      (click)="copy(linkTag)"
       fontSet="material-icons-outlined"
       >file_copy_</mat-icon
     >
@@ -60,7 +71,7 @@
     color="primary"
     download="favicon.svg"
     [href]="downloadURL | safe: 'url'"
-    >ダウンロード</a
+    >Get SVG Favicon</a
   >
 </div>
 
