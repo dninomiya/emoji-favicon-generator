@@ -40,7 +40,7 @@ export class AppComponent {
 
   copy(content) {
     this.clipboard.copy(content);
-    this.snackBar.open('コピーしました', null, {
+    this.snackBar.open('copied!', null, {
       duration: 2000
     });
   }
