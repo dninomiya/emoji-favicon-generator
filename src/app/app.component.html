@@ -12,6 +12,10 @@
 
 <div class="main">
   <div class="editor">
+    <mat-slide-toggle class="editor__theme" [(ngModel)]="settings.isDarkMode"
+      >ダークモード</mat-slide-toggle
+    >
+
     <mat-form-field class="editor__title">
       <mat-label>タイトル</mat-label>
       <input
@@ -29,10 +33,6 @@
         <mat-icon (click)="openEmoji()">face</mat-icon>
       </span>
     </mat-form-field>
-
-    <mat-slide-toggle class="editor__theme" [(ngModel)]="settings.isDarkMode"
-      >ダークモード</mat-slide-toggle
-    >
   </div>
 
   <mat-form-field class="code" appearance="outline" *ngIf="downloadURL">
@@ -65,5 +65,5 @@
 </div>
 
 <footer>
-  by Nino(<a href="https://twitter.com/d151005" target="_blank">@d151005</a>)
+  <a href="https://twitter.com/d151005" target="_blank">@d151005</a>
 </footer>
