@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
-    "@joeattardi/emoji-button": "^2.12.1",
+    "@joeattardi/emoji-button": "^4.6.2",
     "rxjs": "~6.5.4",
     "safe-pipe": "^1.0.2",
     "tslib": "^1.10.0",
